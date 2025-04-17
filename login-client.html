@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion Client</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Connexion Client</h2>
+      <form action="traitement-login-client.php" method="post">
+        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+
+        <p class="forgot-password">
+          <a href="#">Mot de passe oublié ?</a>
+        </p>
+
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+
+    <div class="login-image">
+      <img src="image/login-perfume.jpg" alt="Aura Bloom">
+    </div>
+  </div>
+
+</body>
+</html>
