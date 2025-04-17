@@ -1,0 +1,121 @@
+:root {
+    --beige: #fdf6ee;
+    --mauve: #a678d6;
+    --mauve-dark: #915ccc;
+    --white: #ffffff;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url('image/prf2.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: var(--white);
+}
+
+/* ===== Container login ===== */
+.login-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ===== Login form (gauche) ===== */
+.login-form {
+    flex: 1;
+    padding: 40px;
+    color: var(--white);
+}
+
+.login-form h2 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: var(--white);
+}
+
+.login-form input::placeholder {
+    color: #eee;
+}
+
+.login-form .forgot-password {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.login-form .forgot-password a {
+    color: var(--white);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--mauve);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.login-form button:hover {
+    background-color: var(--mauve-dark);
+}
+
+/* ===== Image (droite) ===== */
+.login-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1),
+        rgba(230, 200, 255, 0.1)
+    );
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+}
+
+
+
+.login-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
