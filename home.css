@@ -1,0 +1,123 @@
+:root {
+    --beige: #fdf6ee;
+    --mauve: #a678d6;
+    --mauve-dark: #915ccc;
+    --white: #ffffff;
+    --text-dark: #2c2c2c;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+    --radius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url('image/prf.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.2s ease;
+    padding: 30px 20px;
+    color: var(--white);
+}
+
+/* ===== LOGO + HEADER ===== */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+/* ===== SECTION SELECTION UTILISATEUR ===== */
+.role-selection {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.role-selection h1 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: rgba(255, 255, 255, 0.05); /* transparent pour voir le fond */
+    padding: 30px 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 260px;
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+    text-align: center;
+    backdrop-filter: blur(10px); /* flou élégant */
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Les textes sont blancs sauf ce qu'on veut garder mauve */
+.card h2 {
+    color: var(--mauve);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--white);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--mauve);
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--mauve);
+    color: var(--white);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition);
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: var(--mauve-dark);
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
